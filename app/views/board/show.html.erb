@@ -1,0 +1,15 @@
+<h1>The Tic Tac Toe Game</h1>
+<table>
+<% @board.rows.each do |row| %>
+  <tr>
+    <% row.each do |tile| %>
+    <td data-tile-id=<%= tile.id %> ><%= tile.mark %> </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<script type="text/javascript">
+  var xTurn =  <%= @board.is_xturn %>,
+      boardID = <%= @board.id  %>;
+</script>
